@@ -1,0 +1,81 @@
+//============================================================================
+// Name        : CS20_HashTable.cpp
+// Author      : Cort Smith
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <list>
+using namespace std;
+
+struct student
+{
+	int ID;
+	string Name;
+	float GPA;
+};
+
+const int HASHSIZE = 10;
+
+int calcHash(int key);
+
+
+
+int main() {
+
+	student* T = nullptr;
+	list<student*>* hashTable[HASHSIZE];
+
+	//Allocate memory of lists.
+	for (int i=0; i<HASHSIZE; i++)
+	{
+		hashTable[i] = new list<student*>;
+	}
+
+	//Insert objects into list.
+	for (int i=0; i<2000; i++)
+	{
+		T = new student;
+		T->ID = rand();
+		hashTable[calcHash(T->ID)]->push_back(T);
+	}
+
+	//Print list collisions.
+	for (int i=0; i<HASHSIZE; i++)
+	{
+		cout << "Collision Count for " << i << " is: " << hashTable[i]->size() << endl;
+	}
+
+	//Clear out memory in lists.
+	for (int i=0; i<HASHSIZE; i++)
+	{
+		for (int j=0; j<hashTable[i]->size(); i++)
+		{
+			delete hashTable[i]->front();
+		}
+	}
+
+
+
+
+
+
+
+	cout << "Program Ending!" << endl; // prints !!!Hello World!!!
+	return 0;
+}
+
+
+
+
+
+int calcHash(int key)
+{
+	return key % HASHSIZE;
+}
+
+
+
+

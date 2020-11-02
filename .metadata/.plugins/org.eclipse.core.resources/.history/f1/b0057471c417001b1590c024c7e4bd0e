@@ -1,0 +1,36 @@
+//============================================================================
+// Name        : CS20_HashTable.cpp
+// Author      : Cort Smith
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <list>
+using namespace std;
+
+struct student
+{
+	int ID;
+	string Name;
+	float GPA;
+};
+
+const int HASHSIZE = 10;
+
+int main() {
+
+	list<student*>* hashTable[HASHSIZE];
+
+	for (int i=0; i<HASHSIZE; i++)
+	{
+		hashTable[i] = new list<student*>;
+	}
+
+
+
+
+	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	return 0;
+}

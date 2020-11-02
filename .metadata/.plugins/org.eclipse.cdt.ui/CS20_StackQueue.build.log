@@ -1,0 +1,7 @@
+07:10:02 **** Incremental Build of configuration Debug for project CS20_StackQueue ****
+Info: Internal Builder is used for build
+g++ "-IC:\\Users\\vessa\\eclipse-workspace\\CS20_StackQueue\\LinkedListLib_Win32" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\CS20_StackQueue.o" "..\\src\\CS20_StackQueue.cpp" 
+g++ "-LC:\\Users\\vessa\\eclipse-workspace\\CS20_StackQueue\\LinkedListLib_Win32" -o CS20_StackQueue.exe "src\\CS20_StackQueue.o" "src\\Queue.o" "src\\Stack.o" -lCustomer -lLinkedList 
+
+07:10:02 Build Finished. 0 errors, 0 warnings. (took 792ms)
+

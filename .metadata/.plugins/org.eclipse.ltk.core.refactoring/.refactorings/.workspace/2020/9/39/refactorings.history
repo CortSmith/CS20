@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;CS20_LinkedList/source/LinkedList.hpp&apos;" deleteContents="false" description="Delete resource &apos;CS20_LinkedList/source/LinkedList.hpp&apos;" element1="/CS20_LinkedList/source/LinkedList.hpp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1600717468003"/>
+</session>

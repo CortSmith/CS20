@@ -1,0 +1,8 @@
+12:00:44 **** Incremental Build of configuration Debug for project LinkedList_ObjectFileUse_Test ****
+Info: Internal Builder is used for build
+g++ "-IC:\\Users\\vessa\\eclipse-workspace\\LinkedList_ObjectFileUse_Test\\LibraryHeaders" "-includelibCustomer.a -O0 -g3 -Wall -c -fmessage-length=0 -o Source\\LinkedList_ObjectFileUse_Test.o ..\\Source\\LinkedList_ObjectFileUse_Test.cpp" 
+g++: fatal error: no input files
+compilation terminated.
+
+12:00:44 Build Finished. 0 errors, 0 warnings. (took 157ms)
+

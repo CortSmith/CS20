@@ -1,0 +1,7 @@
+13:40:46 **** Incremental Build of configuration Debug for project CS20_List ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+g++ -o CS20_List.exe "src\\main.o" 
+
+13:40:47 Build Finished. 0 errors, 0 warnings. (took 820ms)
+

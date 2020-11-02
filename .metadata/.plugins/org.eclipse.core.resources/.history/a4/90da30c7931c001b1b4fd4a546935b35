@@ -1,0 +1,20 @@
+/*
+ * placeholder.hpp
+ *
+ *  Created on: Nov 1, 2020
+ *      Author: vessa
+ */
+
+#ifndef PLACEHOLDER_HPP_
+#define PLACEHOLDER_HPP_
+
+#include "Employee.hpp"
+
+class placeholder : private Employee
+{
+
+};
+
+
+
+#endif /* PLACEHOLDER_HPP_ */

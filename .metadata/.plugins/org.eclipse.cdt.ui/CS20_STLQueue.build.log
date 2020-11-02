@@ -1,0 +1,7 @@
+12:06:34 **** Incremental Build of configuration Debug for project CS20_STLQueue ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\CS20_STLQueue.o" "..\\src\\CS20_STLQueue.cpp" 
+g++ -o CS20_STLQueue.exe "src\\CS20_STLQueue.o" "src\\Student.o" 
+
+12:06:38 Build Finished. 0 errors, 0 warnings. (took 3s.364ms)
+

@@ -1,0 +1,78 @@
+//============================================================================
+// Name        : CS20_Chapter9Project.cpp
+// Author      : Cort Smith
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+#include "Hash.hpp"
+#include "Employee.hpp"
+
+
+
+int main() {
+	cout << "1\n";
+	// Hash table
+
+
+
+
+
+
+
+	//table.PrintList();
+	cout << "5\n";
+	table.PrintCollisionCount();
+
+	cout << "Program ending." << endl; // prints !!!Hello World!!!
+	return 0;
+}
+
+void loadFile(string filename, Hash inTable)
+{
+	Hash table;
+	//File stream variable.
+	ifstream file;
+	file.open("Employees.txt");
+	if (file.is_open())
+	{
+		cout << "2\n";
+		Employee* t = nullptr;
+		while (!file.eof())
+		{
+			t = new Employee;
+
+			file >> t->id;
+			file >> t->last_name;
+			file >> t->first_name;
+			file >> t->salary;
+
+//			cout << "ID:         " << t->id << endl
+//				 << "Last Name:  " << t->last_name << endl
+//				 << "First Name: " << t->first_name << endl
+//				 << "Salary:     " << t->salary << endl;
+
+			table.Insert(t->id, t);
+		}
+
+		cout << "3\n";
+	}
+	else
+	{
+		cout << "4\n";
+		cout << "File did not open..." << endl;
+	}
+	file.close();
+}
+
+
+
+
+
+
