@@ -55,7 +55,7 @@ public:
 	 * 				   	than one object is in table[index].
 	 */
 	int CollisionCount(void);
-	int* CollisionCountHelper(void);
+	int* CollisionCountA(void);
 
 	/* Prints the number of collisions for every table[index].
 	 */
@@ -92,7 +92,8 @@ int Hash::AsciiSummation(std::string key)
 }
 
 /* Normal Ascii Summation method, except every char of the key is
- * 	multiplied exponentially by 1 factor per letter in the key.
+ * 	multiplied exponentially by 1 factor per letter in the key, and
+ * 	then the Employee id is added before modulus is considered.
  *
  * 	Number of collisions is mostly zero compared to regular summation.
  * 	Thought I'd have some fun exploring this a bit.
@@ -163,7 +164,10 @@ Employee* Hash::Find(string key, Employee* object)
 			continue;
 		}
 
-		if (table[index][i]->id == key)
+		std::cout << "Type casting (int): " << (int) table[index][i]->id.data() << endl;
+		std::cout << "No type casting:    " << table[index][i]->id.data() << endl;
+
+		if (table[index][i]->id.data() == table[index][i]->id == key)
 		{
 			return table[index][i];
 		}
@@ -184,7 +188,7 @@ int Hash::CollisionCount(void)
 {
 	int counter = 0;
 
-	int* array = CollisionCountHelper();
+	int* array = CollisionCountA();
 
 	for (int i=0; i < TABLE_SIZE; i++)
 	{
@@ -194,7 +198,7 @@ int Hash::CollisionCount(void)
 
 	return counter;
 }
-int* Hash::CollisionCountHelper(void)
+int* Hash::CollisionCountA(void)
 {
 	// Reset counter back to empty (-1) before counting again
 	for (int i=0; i < TABLE_SIZE; i++)
@@ -222,17 +226,15 @@ int* Hash::CollisionCountHelper(void)
  */
 void Hash::PrintCollisionCount(void)
 {
-	int* array = CollisionCountHelper();
+	int* array = CollisionCountA();
 
 	for (int i=0; i < TABLE_SIZE; i++)
 	{
 		std::cout << "Collisions encountered at table[" << i << "]: " << array[i] << std::endl;
 	}
-
 	std::cout << "Empty table -1 | No collisions 0 | Collisions +1" << std::endl;
 	std::cout << "Total collisions encountered: [" << this->CollisionCount() << "]" << endl;
 }
-
 
 
 void Hash::PrintList(void)
@@ -250,7 +252,7 @@ void Hash::PrintList(void)
 			{
 				continue;
 			}
-			cout << table[i][j]->id << endl;
+			cout << table[i][j]->first_name << endl;
 		}
 	}
 }

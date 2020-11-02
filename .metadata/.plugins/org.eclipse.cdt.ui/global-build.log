@@ -1,4 +1,4 @@
-09:26:42 **** Incremental Build of configuration Debug for project CS20_Chapter9Project ****
+09:40:25 **** Incremental Build of configuration Debug for project CS20_Chapter9Project ****
 Info: Internal Builder is used for build
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\CS20_Chapter9Project.o" "..\\src\\CS20_Chapter9Project.cpp" 
 g++ -o CS20_Chapter9Project.exe "src\\CS20_Chapter9Project.o" 

@@ -23,9 +23,9 @@ int main() {
 
 	loadEmployeesFromFile("Employees.txt", table);
 	table.PrintCollisionCount();
-	cout << "Find Emp01: " << table.Find("Emp01")->salary << endl;
+	cout << "Find Emp01: " << table.Find("Emp01") << endl;
 
-	table.PrintList();
+
 
 
 	cout << "Program ending." << endl; // prints !!!Hello World!!!

@@ -228,11 +228,9 @@ void Hash::PrintCollisionCount(void)
 	{
 		std::cout << "Collisions encountered at table[" << i << "]: " << array[i] << std::endl;
 	}
-
 	std::cout << "Empty table -1 | No collisions 0 | Collisions +1" << std::endl;
 	std::cout << "Total collisions encountered: [" << this->CollisionCount() << "]" << endl;
 }
-
 
 
 void Hash::PrintList(void)
