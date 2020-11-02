@@ -55,7 +55,6 @@ public:
 	 * 				   	than one object is in table[index].
 	 */
 	int CollisionCount(void);
-	int* CollisionCountA(void);
 
 	/* Prints the number of collisions for every table[index].
 	 */
@@ -179,25 +178,12 @@ Employee* Hash::Find(string key, Employee* object)
  */
 int Hash::CollisionCount(void)
 {
-	int counter = 0;
-
-	int* array = CollisionCountA();
-
-	for (int i=0; i < TABLE_SIZE; i++)
-	{
-		if (array[i] == -1) continue;
-		counter += array[i];
-	}
-
-	return counter;
-}
-int* Hash::CollisionCountA(void)
-{
 	// Reset counter back to empty (-1) before counting again
 	for (int i=0; i < TABLE_SIZE; i++)
 	{
 		table_counter[i] = -1;
 	}
+	int counter = 0;
 
 	for (int i=0; i < TABLE_SIZE; i++)
 	{
@@ -205,13 +191,18 @@ int* Hash::CollisionCountA(void)
 
 		for (int k=0; k < HASH_SIZE; k++)
 		{
-			if (table[i][k] == nullptr) continue;
+			if (table[i][k] == nullptr) break;
 
 			table_counter[i]++;
 		}
 	}
 
-	return table_counter;
+	for (int i=0; i < TABLE_SIZE; i++)
+	{
+		counter += table_counter[i];
+	}
+
+	return counter;
 }
 
 
@@ -219,11 +210,9 @@ int* Hash::CollisionCountA(void)
  */
 void Hash::PrintCollisionCount(void)
 {
-	int* array = CollisionCountA();
-
 	for (int i=0; i < TABLE_SIZE; i++)
 	{
-		std::cout << "Collisions encountered at table[" << i << "]: " << array[i] << std::endl;
+		std::cout << "Collisions encountered at table[" << i << "]: " << table_counter[i] << std::endl;
 	}
 	std::cout << "Empty table -1 | No collisions 0 | Collisions +1" << std::endl;
 	std::cout << "Total collisions encountered: [" << this->CollisionCount() << "]" << endl;

@@ -181,12 +181,10 @@ int Hash::CollisionCount(void)
 {
 	int counter = 0;
 
-	int* array = CollisionCountA();
-
 	for (int i=0; i < TABLE_SIZE; i++)
 	{
-		if (array[i] == -1) continue;
-		counter += array[i];
+		if (CollisionCountA[i] == -1) continue;
+		counter += table_counter[i];
 	}
 
 	return counter;
@@ -219,11 +217,9 @@ int* Hash::CollisionCountA(void)
  */
 void Hash::PrintCollisionCount(void)
 {
-	int* array = CollisionCountA();
-
 	for (int i=0; i < TABLE_SIZE; i++)
 	{
-		std::cout << "Collisions encountered at table[" << i << "]: " << array[i] << std::endl;
+		std::cout << "Collisions encountered at table[" << i << "]: " << CollisionCountA()[i] << std::endl;
 	}
 	std::cout << "Empty table -1 | No collisions 0 | Collisions +1" << std::endl;
 	std::cout << "Total collisions encountered: [" << this->CollisionCount() << "]" << endl;
