@@ -25,7 +25,7 @@ int main() {
 	table.PrintCollisionCount();
 	cout << "Find Emp01: " << table.Find("Emp01")->salary << endl;
 
-	table.PrintList();
+	//table.PrintList();
 
 
 	cout << "Program ending." << endl; // prints !!!Hello World!!!

@@ -15,6 +15,8 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\vessa\Desktop Files\CS20_BinarySearchTree.zip"/>
+			<item value="C:\Users\vessa\Desktop Files\CS20_Chapter9Project.zip"/>
 			<item value="C:\Users\vessa\Desktop Files\CS20_StackQueue.zip"/>
 			<item value="C:\Users\vessa\Desktop Files\CS20_STLQueue.zip"/>
 			<item value="C:\Users\vessa\OneDrive\Desktop\CS20_RecursiveLinkedList_UsingLibraries.zip"/>

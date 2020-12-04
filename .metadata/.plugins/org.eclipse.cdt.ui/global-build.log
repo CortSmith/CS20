@@ -1,5 +1,25 @@
-09:40:25 **** Incremental Build of configuration Debug for project CS20_Chapter9Project ****
+11:41:57 **** Incremental Build of configuration Debug for project CS20_Chapter10Project ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\CS20_Chapter9Project.o" "..\\src\\CS20_Chapter9Project.cpp" 
-g++ -o CS20_Chapter9Project.exe "src\\CS20_Chapter9Project.o" 
-Info: Nothing to build for CS20_Chapter9Project
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Heap.o" "..\\src\\Heap.cpp" 
+g++ -o CS20_Chapter10Project.exe "src\\CS20_Chapter10Project.o" "src\\Heap.o" "src\\Planet.o" "src\\utilities.o" 
+Info: Nothing to build for CS20_Chapter10Project
+11:44:16 **** Incremental Build of configuration Debug for project CS20_Chapter10Project ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\CS20_Chapter10Project.o" "..\\src\\CS20_Chapter10Project.cpp" 
+g++ -o CS20_Chapter10Project.exe "src\\CS20_Chapter10Project.o" "src\\Heap.o" "src\\Planet.o" "src\\utilities.o" 
+11:45:23 **** Incremental Build of configuration Debug for project CS20_Chapter10Project ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Heap.o" "..\\src\\Heap.cpp" 
+g++ -o CS20_Chapter10Project.exe "src\\CS20_Chapter10Project.o" "src\\Heap.o" "src\\Planet.o" "src\\utilities.o" 
+11:46:34 **** Incremental Build of configuration Debug for project CS20_Chapter10Project ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Heap.o" "..\\src\\Heap.cpp" 
+g++ -o CS20_Chapter10Project.exe "src\\CS20_Chapter10Project.o" "src\\Heap.o" "src\\Planet.o" "src\\utilities.o" 
+11:50:48 **** Incremental Build of configuration Debug for project CS20_Chapter10Project ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Heap.o" "..\\src\\Heap.cpp" 
+g++ -o CS20_Chapter10Project.exe "src\\CS20_Chapter10Project.o" "src\\Heap.o" "src\\Planet.o" "src\\utilities.o" 
+11:54:18 **** Incremental Build of configuration Debug for project CS20_Chapter10Project ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Heap.o" "..\\src\\Heap.cpp" 
+g++ -o CS20_Chapter10Project.exe "src\\CS20_Chapter10Project.o" "src\\Heap.o" "src\\Planet.o" "src\\utilities.o" 
