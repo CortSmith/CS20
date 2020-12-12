@@ -108,13 +108,18 @@ void Graph::addEdgeUnDir(int source, int destination) {
     }//else
 }//adEdge(int, int)
 
+#include <stack>
+#include <iostream>
+
 //Do a Depth first Search for the graph
 //This function will return a vector of vertices showing how the graph was navigated
 //If you try to start with a vertex which does not exist, this function will return
 //an empty vector
 vector<GraphVertex*> Graph::searchDFS(int start) {
     vector<GraphVertex*> returnVector;
-    
+
+    cout << "Graph::searchDFS" << endl;
+
     /*
      Create a Stack<Node> of nodes to visit;
      Add v to the stack;
@@ -127,7 +132,49 @@ vector<GraphVertex*> Graph::searchDFS(int start) {
      }
      */
     
-    return returnVector;
+    stack<GraphVertex*> Stack;
+    vector<GraphVertex*> Visited;
+    GraphVertex* v;
+    GraphVertex* u;
+    GraphVertex* w;
+
+    cout << "Graph::searchDFS | Calling Graph::clearAllVisited()" << endl;
+    this->clearAllVisited();
+
+    cout << "Graph::searchDFS | Setting v to edgeArray[start].first" << endl;
+    v = edgeArray[start].first;
+
+    cout << "Graph::searchDFS | Pushing v to Stack." << endl;
+    Stack.push(v);
+
+    cout << "Graph::searchDFS | While Stack is not empty" << endl;
+    while (!Stack.empty())
+    {
+        //cout << "Graph::searchDFS | While Stack is not empty | Set u to Stack.top()" << endl;
+    	u = Stack.top();
+
+    	//cout << "Graph::searchDFS | While Stack is not empty | Call Stack.pop()" << endl;
+    	Stack.pop();
+
+    	//cout << "Graph::searchDFS | While Stack is not empty | Set u->Visited to true" << endl;
+    	u->Visited = true;
+
+    	//cout << "Graph::searchDFS | While Stack is not empty | If u->Visited, continue to next loop." << endl;
+    	if (u->Visited) continue;
+
+        //cout << "Graph::searchDFS | While Stack is not empty | push_back u to Visited vector." << endl;
+    	Visited.push_back(u);
+
+        //cout << "Graph::searchDFS | While Stack is not empty | Push adjacent GraphVertex's onto Stack." << endl;
+        for (int i=0; i<this->getDestVertex(start)->size(); i++)
+    	{
+    	    //cout << "Graph::searchDFS | While Stack is not empty | For | Print adjacent GraphVertex Value." << endl;
+    		w = getDestVertex(start)[i].at(i);
+    		Stack.push(w);
+    	}
+    }
+
+    return Visited;
 }//searchDFS
 
 //Do a Breadth first Search for the graph

@@ -43,14 +43,14 @@ all: CS20_Chapter12_GraphProject
 # Tool invocations
 CS20_Chapter12_GraphProject: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
-	@echo 'Invoking: GCC C++ Linker'
+	@echo 'Invoking: MacOS X C++ Linker'
 	g++  -o "CS20_Chapter12_GraphProject" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(CC_DEPS)$(C++_DEPS)$(EXECUTABLES)$(C_UPPER_DEPS)$(CXX_DEPS)$(OBJS)$(CPP_DEPS)$(C_DEPS) CS20_Chapter12_GraphProject
+	-$(RM) $(CC_DEPS)$(C++_DEPS)$(EXECUTABLES)$(OBJS)$(C_UPPER_DEPS)$(CXX_DEPS)$(CPP_DEPS)$(C_DEPS) CS20_Chapter12_GraphProject
 	-@echo ' '
 
 .PHONY: all clean dependents
